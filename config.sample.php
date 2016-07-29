@@ -29,7 +29,7 @@ $opts['ext-param'] = '';    // 额外参数
 $opts['apps']= array(       //异步处理任务，又拍云支持异步图片处理和异步音视频处理服务，具体可以参考：http://docs.upyun.com/api/form_api/#_4
           array(
             'name' =>  'naga',   // 需要指定 name 为 naga，这里是以音视频处理为例子
-            'type' =>  'thumbnail',  //处理类型
+            'type' =>  'thumbnail',  //处理类型，其它处理类型参考：http://docs.upyun.com/cloud/av/#_9
             'avopts' =>  '/o/0/n/10',  //处理参数
             'save_as' =>  '/a/b/c.png'  // 保存路径
                 )
