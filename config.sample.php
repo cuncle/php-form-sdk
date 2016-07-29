@@ -26,6 +26,14 @@ $opts['x-gmkerl-rotate'] = '';  // 图片旋转，参数：auto 90 180 或 270
 $opts['x-gmkerl-crop'] = '';    // 图片裁剪，格式：x,y,width,height
 $opts['x-gmkerl-exif-switch'] = ''; // 是否保留 exif 信息，参数：true
 $opts['ext-param'] = '';    // 额外参数
+$opts['apps']= array(       //异步处理任务，又拍云支持异步图片处理和异步音视频处理服务，具体可以参考：http://docs.upyun.com/api/form_api/#_4
+          array(
+            'name' =>  'naga',   // 需要指定 name 为 naga，这里是以音视频处理为例子
+            'type' =>  'thumbnail',  //处理类型
+            'avopts' =>  '/o/0/n/10',  //处理参数
+            'save_as' =>  '/a/b/c.png'  // 保存路径
+                )
+                  );
  */
 
 $policy = $upyun->policyCreate($opts);
